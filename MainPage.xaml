@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Music_Player.MainPage">
+
+    <Grid RowDefinitions="Auto,*,Auto">
+            <!-- Carátula del álbum -->
+            <Image Grid.Row="0" Source="album_cover.jpg" Aspect="AspectFill"
+               WidthRequest="250" HeightRequest="250" VerticalOptions="Center"
+               HorizontalOptions="Center" />
+
+            <!-- Controles principales -->
+            <StackLayout Grid.Row="1" Padding="20" VerticalOptions="Center" Spacing="20">
+                <Label Text="Nombre de la Canción" FontSize="24" TextColor="White" 
+                   HorizontalTextAlignment="Center" />
+                <Label Text="Artista" FontSize="18" TextColor="Gray" 
+                   HorizontalTextAlignment="Center" />
+
+                <Slider x:Name="progressSlider" Minimum="0" Maximum="100" 
+                    ThumbColor="White" MaximumTrackColor="Gray" MinimumTrackColor="White"/>
+
+                <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Spacing="40">
+                    <Button Text="⏮" FontSize="24" BackgroundColor="Transparent" TextColor="White" />
+                    <Button Text="▶" FontSize="24" BackgroundColor="Transparent" TextColor="White" />
+                    <Button Text="⏭" FontSize="24" BackgroundColor="Transparent" TextColor="White" />
+                </StackLayout>
+            </StackLayout>
+
+            <!-- Barra inferior con controles adicionales -->
+            <Grid Grid.Row="2" Padding="10">
+                <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Spacing="30">
+                    <Button Text="🔊" FontSize="20" BackgroundColor="Transparent" TextColor="White" />
+                    <Button Text="📂" FontSize="20" BackgroundColor="Transparent" TextColor="White" />
+                    <Button Text="⚙" FontSize="20" BackgroundColor="Transparent" TextColor="White" />
+                </StackLayout>
+            </Grid>
+        </Grid>
+    </ContentPage>
